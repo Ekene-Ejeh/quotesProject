@@ -22,3 +22,13 @@ const quotes = [
 			"I'm a success today because I had a friend who believed in me and I didn't have the heart to let him down.",
 	},
 ];
+
+const quoteBtn = document.getElementById("quoteBtn");
+const quote = document.getElementById("quote");
+const quoteAuthor = document.getElementById("quoteAuthor");
+
+quoteBtn.addEventListener("click", () => {
+	let number = Math.floor(Math.random() * quotes.length);
+	quote.innerHTML = quotes[number].quote;
+	quoteAuthor.innerHTML = quotes[number].name;
+});
